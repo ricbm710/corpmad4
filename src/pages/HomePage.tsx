@@ -1,5 +1,12 @@
+//components
+import Products from "../components/Products";
+
 const HomePage = () => {
-  return <div>HomePage by Ric</div>;
+  return (
+    <>
+      <Products />
+    </>
+  );
 };
 
 export default HomePage;

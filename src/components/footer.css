@@ -1,0 +1,12 @@
+.footer-container {
+  background-color: var(--cream);
+  padding: 0.5rem;
+}
+
+.custom-footer-title {
+  font-size: 1rem;
+}
+
+.socials-icon {
+  color: var(--violet-jtc);
+}

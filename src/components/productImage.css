@@ -1,0 +1,26 @@
+.custom-card-image-sm,
+.custom-card-image-md,
+.custom-card-image-lg {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--pistachio);
+
+  width: 100%; /* Make it responsive */
+  /*max-width: 100px;*/ /* Control the max width for different sizes */
+}
+
+.custom-card-image-md {
+  max-width: 200px;
+}
+
+.custom-card-image-lg {
+  max-width: 300px;
+}
+
+.custom-card-image-sm:hover,
+.custom-card-image-md:hover,
+.custom-card-image-lg:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+}

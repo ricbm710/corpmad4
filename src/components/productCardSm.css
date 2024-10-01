@@ -1,0 +1,26 @@
+.card .custom-card-prod-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.custom-card-prod-desc {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .card .custom-card-prod-title {
+    font-size: 1rem;
+  }
+  .custom-card-prod-desc {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .card .custom-card-prod-title {
+    font-size: 1.2rem;
+  }
+  .custom-card-prod-desc {
+    font-size: 1rem;
+  }
+}

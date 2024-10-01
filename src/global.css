@@ -1,0 +1,95 @@
+/* colors by coolors.co & styles by ChatGPT*/
+:root {
+  --cream: #f3f9d2ff;
+  --tea-green: #cbeaa6ff;
+  --pistachio: #c0d684ff;
+  --dark-purple: #3d0b37ff;
+  --violet-jtc: #63264aff;
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Lora", serif;
+  --transition-speed: 0.3s;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  color: var(--dark-purple);
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+  color: var(--violet-jtc);
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--dark-purple);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--violet-jtc);
+}
+
+button {
+  font-family: var(--font-primary);
+  background-color: var(--pistachio);
+  color: var(--dark-purple);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+button:hover {
+  background-color: var(--tea-green);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #a1aab13b;
+  border: 1px solid var(--pistachio);
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow var(--transition-speed);
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+input,
+textarea {
+  font-family: var(--font-primary);
+  border: 1px solid var(--pistachio);
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color var(--transition-speed);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--tea-green);
+  outline: none;
+}
