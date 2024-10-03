@@ -43,7 +43,7 @@ a:hover {
   color: var(--violet-jtc);
 }
 
-button {
+/*button {
   font-family: var(--font-primary);
   background-color: var(--pistachio);
   color: var(--dark-purple);
@@ -52,11 +52,11 @@ button {
   cursor: pointer;
   transition: background-color var(--transition-speed),
     color var(--transition-speed);
-}
-
+}*/
+/*
 button:hover {
   background-color: var(--tea-green);
-}
+}*/
 
 .container {
   max-width: 1200px;

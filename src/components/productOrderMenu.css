@@ -1,0 +1,12 @@
+.add2cart-button {
+  background-color: var(--dark-purple) !important;
+  border-color: var(--dark-purple) !important;
+}
+
+.prod-order-title {
+  font-size: 1.2rem;
+}
+
+.prod-order-price {
+  font-size: 1rem;
+}

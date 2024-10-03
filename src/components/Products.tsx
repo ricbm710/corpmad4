@@ -8,7 +8,7 @@ import ProductCardSm from "./ProductCardSm";
 const Products = () => {
   return (
     <>
-      <Container className="d-flex flex-wrap">
+      <Container className="d-flex flex-wrap align-items-stretch">
         {products.map((p) => (
           <Col key={p.id} xs={6} sm={4} md={2}>
             <ProductCardSm product={p} />

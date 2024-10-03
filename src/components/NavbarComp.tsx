@@ -9,6 +9,8 @@ import "./navbarComp.css";
 //fa
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+//utils
+import { basePath } from "../utils/basePath";
 
 const NavbarComp = () => {
   return (
@@ -16,7 +18,7 @@ const NavbarComp = () => {
       <Navbar className="custom-navbar" expand="lg">
         <Container>
           {/* Left section: Brand logo */}
-          <Navbar.Brand as={Link} to="/" className="me-auto">
+          <Navbar.Brand as={Link} to={basePath} className="me-auto">
             <img src={logo} alt="Corpmad Logo" className="custom-logo" />
           </Navbar.Brand>
 
@@ -37,10 +39,14 @@ const NavbarComp = () => {
           {/* Collapsible Nav items */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Item as={Link} to="/" className="nav-link custom-nav">
+              <Nav.Item as={Link} to={basePath} className="nav-link custom-nav">
                 Productos
               </Nav.Item>
-              <Nav.Item as={Link} to="/" className="nav-link custom-nav">
+              <Nav.Item
+                as={Link}
+                to={`${basePath}ubicaciones`}
+                className="nav-link custom-nav"
+              >
                 Ubicaciones
               </Nav.Item>
             </Nav>

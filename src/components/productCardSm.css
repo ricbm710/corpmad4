@@ -1,6 +1,7 @@
 .card .custom-card-prod-title {
   font-size: 1rem;
   font-weight: 600;
+  margin-bottom: auto;
 }
 
 .custom-card-prod-desc {

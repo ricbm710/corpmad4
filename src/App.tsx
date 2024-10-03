@@ -4,18 +4,21 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
 //pages
 import HomePage from "./pages/HomePage";
+import ProductOrder from "./pages/ProductOrder";
 //bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 //css
 import "./global.css";
+//utils
+import { basePath } from "./utils/basePath";
 
 const App = () => {
-  const basePath = import.meta.env.BASE_URL;
   return (
     <>
       <Routes>
         <Route path={basePath} element={<Layout />}>
           <Route index element={<HomePage />}></Route>
+          <Route path="order/:id" element={<ProductOrder />} />
         </Route>
         <Route path="*" element={<div>Error 404</div>}></Route>
       </Routes>
