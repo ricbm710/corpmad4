@@ -22,21 +22,21 @@ const Footer = () => {
               <FontAwesomeIcon
                 icon={faFacebook}
                 size="lg"
-                className="socials-icon"
+                className="socials-icon mx-2"
               ></FontAwesomeIcon>
             </Link>
             <Link to="/">
               <FontAwesomeIcon
                 icon={faInstagram}
                 size="lg"
-                className="socials-icon"
+                className="socials-icon mx-2"
               ></FontAwesomeIcon>
             </Link>
             <Link to="/">
               <FontAwesomeIcon
                 icon={faTiktok}
                 size="lg"
-                className="socials-icon"
+                className="socials-icon mx-2"
               ></FontAwesomeIcon>
             </Link>
           </div>

@@ -10,7 +10,7 @@ const Products = () => {
     <>
       <Container className="d-flex flex-wrap align-items-stretch">
         {products.map((p) => (
-          <Col key={p.id} xs={6} sm={4} md={2}>
+          <Col key={p.id} xs={6} sm={4} md={4}>
             <ProductCardSm product={p} />
           </Col>
         ))}

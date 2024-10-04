@@ -19,27 +19,29 @@ const ProductOrderMenu = ({ product }: { product: product }) => {
     <>
       <Card>
         <Card.Body>
-          <Card.Title className="prod-order-title fw-bold">
+          <Card.Title className="global-title fw-bold">
             {product.nombre}
           </Card.Title>
-          <Card.Text className="prod-order-price">
+          <Card.Text className="global-subtitle">
             Bs. {product.precio}
           </Card.Text>
           <div>
             <FormGroup controlId="formQuantity">
-              <FormLabel>Cantidad:</FormLabel>
+              <FormLabel className="global-text">Cantidad:</FormLabel>
               <FormControl
                 type="number"
                 value={qty}
                 min={1}
-                className="mb-2"
+                className="mb-2 global-text"
                 onChange={(e) => {
                   const newValue = e.target.value.replace(/^0+/, ""); // Remove leading zeros
                   setQty(newValue ? newValue : ""); // Set the number, or empty if no valid input
                 }}
               ></FormControl>
             </FormGroup>
-            <Button className="w-100 add2cart-button">Agregar a Carro</Button>
+            <Button className="w-100 add2cart-button global-text">
+              Agregar a Carro
+            </Button>
           </div>
         </Card.Body>
       </Card>

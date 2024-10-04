@@ -28,14 +28,22 @@ const ProductOrder = () => {
     <>
       <Container>
         <Row className="d-flex flex-row flex-wrap">
-          <Col md={6} xs={12} className="mb-2">
+          <Col md={6} xs={12} lg={6} className="mb-2">
             {product ? (
               <ProductImage path={product.imagen} size="lg" />
             ) : (
               <div>Cargando Imagen...</div>
             )}
           </Col>
-          <Col>{product && <ProductOrderMenu product={product} />}</Col>
+          <Col md={6} xs={12} lg={6}>
+            {product && <ProductOrderMenu product={product} />}
+          </Col>
+          <Col>
+            <h4 className="mt-4 global-subtitle fw-bold">
+              Descripción del Producto:
+            </h4>
+            <p className="global-text">{product?.descripcion}</p>
+          </Col>
         </Row>
       </Container>
     </>
