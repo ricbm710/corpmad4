@@ -1,0 +1,18 @@
+/* Success Toast */
+.Toastify__toast--success {
+  background-color: var(
+    --pistachio
+  ) !important; /* Change to your desired green color */
+  color: black !important; /* Optional: Change text color */
+  border: 1px solid black;
+}
+
+.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: var(
+    --dark-purple
+  ) !important; /* Change to your desired icon color (e.g., white) */
+}
+
+.Toastify__progress-bar--success {
+  background: var(--dark-purple) !important;
+}

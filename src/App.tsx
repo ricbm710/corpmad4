@@ -13,6 +13,8 @@ import "./global.css";
 import { basePath } from "./utils/basePath";
 //context
 import CartProvider from "./contexts/CartProvider";
+//Toastify
+import "react-toastify/ReactToastify.css";
 
 const App = () => {
   return (

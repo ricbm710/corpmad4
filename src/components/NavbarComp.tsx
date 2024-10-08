@@ -11,8 +11,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 //utils
 import { basePath } from "../utils/basePath";
+//custom hooks
+import { useCart } from "../hooks/useCart";
 
 const NavbarComp = () => {
+  //Context Provider Hook
+  const { cart } = useCart();
+  console.log(cart);
   return (
     <>
       <Navbar className="custom-navbar" expand="lg">

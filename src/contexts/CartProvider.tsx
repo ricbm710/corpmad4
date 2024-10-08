@@ -23,10 +23,7 @@ const CartProvider = ({ children }: CartProviderProps) => {
   }, [cart]);
 
   //add to cart function
-  const addToCart = (
-    productToAdd: Omit<productToCart, "qty">,
-    qtyToAdd: number
-  ) => {
+  const addToCart = (productToAdd: productToCart) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find(
         (item) => item.product.id === productToAdd.product.id
@@ -35,11 +32,11 @@ const CartProvider = ({ children }: CartProviderProps) => {
       if (existingProduct) {
         return prevCart.map((item) =>
           item.product.id === productToAdd.product.id
-            ? { ...item, qty: item.qty + qtyToAdd }
+            ? { ...item, qty: item.qty + productToAdd.qty } //*changed
             : item
         );
       } else {
-        return [...prevCart, { ...productToAdd, qty: qtyToAdd }];
+        return [...prevCart, productToAdd]; //*changed
       }
     });
   };
