@@ -11,17 +11,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./global.css";
 //utils
 import { basePath } from "./utils/basePath";
+//context
+import CartProvider from "./contexts/CartProvider";
 
 const App = () => {
   return (
     <>
-      <Routes>
-        <Route path={basePath} element={<Layout />}>
-          <Route index element={<HomePage />}></Route>
-          <Route path="order/:id" element={<ProductOrder />} />
-        </Route>
-        <Route path="*" element={<div>Error 404</div>}></Route>
-      </Routes>
+      <CartProvider>
+        <Routes>
+          <Route path={basePath} element={<Layout />}>
+            <Route index element={<HomePage />}></Route>
+            <Route path="order/:id" element={<ProductOrder />} />
+          </Route>
+          <Route path="*" element={<div>Error 404</div>}></Route>
+        </Routes>
+      </CartProvider>
     </>
   );
 };

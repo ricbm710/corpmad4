@@ -7,7 +7,10 @@
   border: 1px solid var(--pistachio);
 
   width: 100%; /* Make it responsive */
-  /*max-width: 100px;*/ /* Control the max width for different sizes */
+  max-width: 100px;
+}
+.custom-card-image-sm {
+  max-width: 150px;
 }
 
 .custom-card-image-md {
@@ -15,7 +18,7 @@
 }
 
 .custom-card-image-lg {
-  max-width: 300px;
+  max-width: 200px;
 }
 
 .custom-card-image-sm:hover,
