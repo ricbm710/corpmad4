@@ -12,12 +12,9 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 //utils
 import { basePath } from "../utils/basePath";
 //custom hooks
-import { useCart } from "../hooks/useCart";
+//import { useCart } from "../hooks/useCart";
 
 const NavbarComp = () => {
-  //Context Provider Hook
-  const { cart } = useCart();
-  console.log(cart);
   return (
     <>
       <Navbar className="custom-navbar" expand="lg">
@@ -29,7 +26,7 @@ const NavbarComp = () => {
 
           {/* Right section: Shopping Cart */}
           <div className="d-lg-none ms-auto">
-            <Link to="/cart">
+            <Link to={`${basePath}cart`}>
               <FontAwesomeIcon
                 icon={faCartShopping}
                 size="sm"
@@ -58,7 +55,7 @@ const NavbarComp = () => {
 
             {/* Shopping Cart visible on larger screens */}
             <div className="d-none d-lg-block ms-3">
-              <Link to="/cart">
+              <Link to={`${basePath}cart`}>
                 <FontAwesomeIcon
                   icon={faCartShopping}
                   size="sm"

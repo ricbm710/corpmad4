@@ -1,0 +1,15 @@
+.custom-trash-button {
+  border: none;
+  background-color: white;
+}
+
+.custom-trash-icon {
+  border: none;
+}
+
+.cart-item-info {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--pistachio);
+}

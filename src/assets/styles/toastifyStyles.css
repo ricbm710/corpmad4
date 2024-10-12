@@ -1,18 +1,47 @@
 /* Success Toast */
-.Toastify__toast--success {
+.custom-success-toast {
   background-color: var(
     --pistachio
   ) !important; /* Change to your desired green color */
   color: black !important; /* Optional: Change text color */
   border: 1px solid black;
+  font-size: 0.7rem;
 }
 
-.Toastify__toast--success .Toastify__toast-icon svg {
+.custom-warning-toast {
+  background-color: var(
+    --pistachio
+  ) !important; /* Change to your desired green color */
+  color: red !important; /* Optional: Change text color */
+  border: 1px solid black;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.custom-success-toast .Toastify__toast-icon svg,
+.custom-warning-toast .Toastify__toast-icon svg {
   fill: var(
     --dark-purple
   ) !important; /* Change to your desired icon color (e.g., white) */
 }
 
-.Toastify__progress-bar--success {
+.Toastify__progress-bar--success,
+.Toastify__progress-bar--warning {
   background: var(--dark-purple) !important;
+}
+
+/* Medium screens (md: 768px and above) */
+@media (min-width: 768px) {
+  .custom-success-toast,
+  .custom-warning-toast {
+    font-size: 0.8rem;
+  }
+}
+
+/* Large screens (lg: 1024px and above) */
+@media (min-width: 1024px) {
+  .custom-success-toast,
+  .custom-warning-toast {
+    font-size: 1rem;
+  }
 }

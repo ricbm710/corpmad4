@@ -17,30 +17,27 @@ import "../assets/styles/toastifyStyles.css";
 //custom hooks
 import { useCart } from "../hooks/useCart";
 //toastify
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+//utils
+import { showSuccessToast, showWarningToast } from "../utils/toastConfig";
 
 const ProductOrderMenu = ({ product }: { product: product }) => {
-  const [qty, setQty] = useState<string>("");
+  const [qty, setQty] = useState<string>("1");
   //context
-  const { cart, addToCart } = useCart();
+  const { addToCart } = useCart();
   const handleAddToCart = () => {
-    const prodToCart: productToCart = {
-      product: product,
-      qty: Number(qty),
-    };
-    //qty was already updated
-    addToCart(prodToCart);
-    //*to be deleted
-    console.log(cart);
-    toast.success("Item agregado a carro", {
-      position: "top-right", // Position of the toast
-      autoClose: 3000, // Auto-close after 3 seconds
-      hideProgressBar: false, // Show progress bar or not
-      closeOnClick: true, // Close on click
-      pauseOnHover: true, // Pause on hover
-      draggable: true, // Allow dragging to dismiss
-      progress: undefined, // Optional progress value
-    });
+    if (qty !== "") {
+      const prodToCart: productToCart = {
+        product: product,
+        qty: Number(qty),
+      };
+      //qty was already updated
+      addToCart(prodToCart);
+
+      showSuccessToast();
+    } else {
+      showWarningToast("Seleccione cantidad!");
+    }
   };
 
   return (

@@ -48,8 +48,19 @@ const CartProvider = ({ children }: CartProviderProps) => {
     );
   };
 
+  //update item qty
+  const updateCartItemQty = (id: number, newQty: number) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.product.id === id ? { ...item, qty: newQty } : item
+      )
+    );
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, updateCartItemQty }}
+    >
       {children}
     </CartContext.Provider>
   );

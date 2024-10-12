@@ -5,6 +5,7 @@ import Layout from "./Layout";
 //pages
 import HomePage from "./pages/HomePage";
 import ProductOrder from "./pages/ProductOrder";
+import CartPage from "./pages/CartPage";
 //bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 //css
@@ -24,6 +25,7 @@ const App = () => {
           <Route path={basePath} element={<Layout />}>
             <Route index element={<HomePage />}></Route>
             <Route path="order/:id" element={<ProductOrder />} />
+            <Route path="cart" element={<CartPage />} />
           </Route>
           <Route path="*" element={<div>Error 404</div>}></Route>
         </Routes>
