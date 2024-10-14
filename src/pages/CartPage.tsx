@@ -1,5 +1,5 @@
 //bootstrap
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 //custom hooks
 import { useCart } from "../hooks/useCart";
 //components
@@ -20,9 +20,17 @@ const CartPage = () => {
   const handleUpdateItemQty = (id: number, newQty: number) => {
     updateCartItemQty(id, newQty);
   };
+  //*get subtotal
+  const calculateSubtotal = () => {
+    return cart.reduce((subtotal, item) => {
+      return subtotal + item.product.precio * item.qty;
+    }, 0);
+  };
+  const subTotal = calculateSubtotal();
+
   return (
     <>
-      <Container>
+      <Container className="cart-page-container">
         <h1 className="text-center global-title">Tu carrito</h1>
 
         {cart.length === 0 ? (
@@ -92,6 +100,14 @@ const CartPage = () => {
             </Row>
           ))
         )}
+        <div className="text-center mt-4">
+          <h3 className="global-title">Subtotal: Bs. {subTotal}</h3>
+        </div>
+        <div className="text-center">
+          <Button className="w-20 mt-2 purchase-button global-text">
+            Comprar
+          </Button>
+        </div>
       </Container>
     </>
   );

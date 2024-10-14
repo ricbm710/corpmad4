@@ -13,3 +13,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid var(--pistachio);
 }
+
+.purchase-button {
+  background-color: var(--dark-purple) !important;
+  border-color: var(--dark-purple) !important;
+}

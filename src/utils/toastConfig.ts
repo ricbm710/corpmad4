@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 export const showSuccessToast = () => {
   toast.success("Item agregado a carro", {
     className: "custom-success-toast",
-    position: "top-right",
+    position: "bottom-right",
     autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: true,
@@ -16,7 +16,7 @@ export const showSuccessToast = () => {
 export const showWarningToast = (message: string) => {
   toast.warning(message, {
     className: "custom-warning-toast",
-    position: "top-right",
+    position: "bottom-right",
     autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: true,
