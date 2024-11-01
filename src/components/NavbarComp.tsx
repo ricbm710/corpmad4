@@ -44,11 +44,7 @@ const NavbarComp = () => {
               <Nav.Item as={Link} to={basePath} className="nav-link custom-nav">
                 Productos
               </Nav.Item>
-              <Nav.Item
-                as={Link}
-                to={`${basePath}ubicaciones`}
-                className="nav-link custom-nav"
-              >
+              <Nav.Item as={Link} to={basePath} className="nav-link custom-nav">
                 Ubicaciones
               </Nav.Item>
             </Nav>

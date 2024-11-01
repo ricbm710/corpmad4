@@ -9,6 +9,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 //css
 import "./cartPage.css";
+//rrd
+import { useNavigate } from "react-router-dom";
+//utils
+import { basePath } from "../utils/basePath";
 
 const CartPage = () => {
   const { cart, removeFromCart, updateCartItemQty } = useCart();
@@ -27,6 +31,12 @@ const CartPage = () => {
     }, 0);
   };
   const subTotal = calculateSubtotal();
+
+  //*navigate to Purchase Page
+  const navigate = useNavigate();
+  const handlePurchaseClick = () => {
+    navigate(`${basePath}purchase`);
+  };
 
   return (
     <>
@@ -104,7 +114,10 @@ const CartPage = () => {
           <h3 className="global-title">Subtotal: Bs. {subTotal}</h3>
         </div>
         <div className="text-center">
-          <Button className="w-20 mt-2 purchase-button global-text">
+          <Button
+            className="w-20 mt-2 purchase-button global-text"
+            onClick={handlePurchaseClick}
+          >
             Comprar
           </Button>
         </div>
